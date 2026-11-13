@@ -1,0 +1,81 @@
+
+@import "tailwindcss";
+
+/* Global Base Styles */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+
+  body {
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #ffffff;
+    color: #0f172a;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+/* Consistent Page Alignment */
+.site-container {
+  width: calc(100% - 80px);
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+/* Section Spacing */
+.section-spacing {
+  padding-block: 72px;
+}
+
+/* Search Bar Alignment */
+#home + section .site-container {
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .site-container {
+    width: calc(100% - 48px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .site-container {
+    width: calc(100% - 32px);
+  }
+
+  .section-spacing {
+    padding-block: 48px;
+  }
+}
