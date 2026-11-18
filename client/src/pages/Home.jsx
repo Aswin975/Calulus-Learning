@@ -383,15 +383,15 @@ function Home() {
 
   <div
     id="course-carousel"
-    className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-6"
+    className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-5"
   >
     {filteredCourses.map((course) => (
       <div
-        key={course.id}
-        className="w-[85%] shrink-0 snap-start sm:w-[48%] lg:w-[calc(33.333%-16px)]"
-      >
-        <CourseCard course={course} />
-      </div>
+          key={course.id}
+          className="w-[80%] shrink-0 snap-start sm:w-[44%] lg:w-[calc(31%-12px)]"
+        >
+          <CourseCard course={course} />
+       </div>
     ))}
   </div>
 

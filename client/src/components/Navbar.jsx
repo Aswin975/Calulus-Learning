@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import {
   Menu,
   X,
@@ -17,6 +18,34 @@ function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   const isDark = theme === "dark";
+
+  useEffect(() => {
+  const handleHashScroll = () => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      const section = document.querySelector(hash);
+
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+    }
+  };
+
+  handleHashScroll();
+
+  window.addEventListener("hashchange", handleHashScroll);
+
+  return () => {
+    window.removeEventListener("hashchange", handleHashScroll);
+  };
+}, []);
+
 
   const navLinks = [
     { name: "Home", path: "/" },
