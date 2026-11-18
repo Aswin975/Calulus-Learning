@@ -18,7 +18,6 @@ import Navbar from "../components/Navbar";
 import CourseCard from "../components/CourseCard";
 import { courses } from "../data/courses";
 
-
 // Category data
 const categories = [
   { name: "Calculus", icon: FunctionSquare },
@@ -67,21 +66,22 @@ function Home() {
   });
 
   return (
-   <div className="min-h-screen w-full overflow-x-hidden bg-white text-slate-900">
+   <div className="min-h-screen w-full overflow-x-hidden bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-white">
+
       {/* NAVBAR */}
       <Navbar />
 
       {/* HERO SECTION */}
       <section
         id="home"
-        className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950"
       >
         {/* Background decorations */}
         <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-blue-200/40 blur-3xl" />
 
         <div className="pointer-events-none absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-violet-200/30 blur-3xl" />
 
-       <div className="site-container relative grid grid-cols-1 items-center gap-12 py-12 md:grid-cols-2 md:gap-10 lg:gap-16 lg:py-20">
+        <div className="site-container relative grid grid-cols-1 items-center gap-12 py-12 md:grid-cols-2 md:gap-10 lg:gap-16 lg:py-20">
 
           {/* HERO CONTENT */}
           <div className="flex flex-col items-start">
@@ -91,7 +91,7 @@ function Home() {
               A smarter way to learn mathematics
             </div>
 
-            <h1 className="max-w-xl text-5xl font-extrabold leading-[1.08] tracking-tight text-slate-950 sm:text-6xl lg:text-[68px]">
+            <h1 className="max-w-xl text-5xl font-extrabold leading-[1.08] tracking-tight text-slate-950 sm:text-6xl lg:text-[68px] dark:text-white">
               Mathematics
               <br />
               made
@@ -100,7 +100,7 @@ function Home() {
               </span>
             </h1>
 
-            <p className="mt-7 max-w-lg text-base leading-8 text-slate-600 md:text-lg">
+            <p className="mt-7 max-w-lg text-base leading-8 text-slate-600 md:text-lg dark:text-slate-300">
               Discover a better way to understand mathematics.
               Learn at your own pace with interactive lessons,
               practical examples and expert-designed courses.
@@ -131,28 +131,28 @@ function Home() {
             <div className="mt-12 grid w-full max-w-lg grid-cols-3 gap-4">
 
               <div>
-                <h3 className="text-xl font-bold text-slate-900 md:text-2xl">
+                <h3 className="text-xl font-bold text-slate-900 md:text-2xl dark:text-white">
                   Learn
                 </h3>
-                <p className="mt-1 text-xs text-slate-500 md:text-sm">
+                <p className="mt-1 text-xs text-slate-500 md:text-sm dark:text-slate-300">
                   At your own pace
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-slate-900 md:text-2xl">
+                <h3 className="text-xl font-bold text-slate-900 md:text-2xl dark:text-white">
                   Practice
                 </h3>
-                <p className="mt-1 text-xs text-slate-500 md:text-sm">
+                <p className="mt-1 text-xs text-slate-500 md:text-sm dark:text-slate-300">
                   Build confidence
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-slate-900 md:text-2xl">
+                <h3 className="text-xl font-bold text-slate-900 md:text-2xl dark:text-white">
                   Master
                 </h3>
-                <p className="mt-1 text-xs text-slate-500 md:text-sm">
+                <p className="mt-1 text-xs text-slate-500 md:text-sm dark:text-slate-300">
                   Achieve your goals
                 </p>
               </div>
@@ -169,7 +169,7 @@ function Home() {
 
               {/* Top label */}
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-medium tracking-widest text-blue-200">
+                <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-medium tracking-widest text-blue-200 dark:text-slate-300">
                   MATHEMATICS STUDIO
                 </span>
 
@@ -179,7 +179,7 @@ function Home() {
               {/* Mathematical illustration */}
               <div className="py-12 text-center">
 
-                <p className="mb-8 text-xs font-semibold tracking-[0.2em] text-blue-200 sm:text-sm">
+                <p className="mb-8 text-xs font-semibold tracking-[0.2em] text-blue-200 sm:text-sm dark:text-slate-300">
                   DISCOVER THE BEAUTY OF MATH
                 </p>
 
@@ -213,10 +213,11 @@ function Home() {
                     </div>
 
                     <div>
-                      <p className="font-semibold">
+                      <p className="font-semibold dark:text-slate-300">
                         Your learning journey
                       </p>
-                      <p className="mt-1 text-xs text-blue-200">
+
+                      <p className="mt-1 text-xs text-blue-200 dark:text-slate-300">
                         Starts here
                       </p>
                     </div>
@@ -233,12 +234,12 @@ function Home() {
             {/* Floating cards */}
             <div className="absolute -left-5 top-20 hidden rounded-2xl border border-slate-100 bg-white p-4 shadow-xl sm:block">
               <Calculator className="mb-2 text-blue-600" size={25} />
-              <p className="text-xs font-bold">Think logically</p>
+              <p className="text-xs font-bold dark:text-slate-300">Think logically</p>
             </div>
 
             <div className="absolute -right-5 bottom-24 hidden rounded-2xl border border-slate-100 bg-white p-4 shadow-xl sm:block">
               <Award className="mb-2 text-violet-600" size={25} />
-              <p className="text-xs font-bold">Learn confidently</p>
+              <p className="text-xs font-bold dark:text-slate-300">Learn confidently</p>
             </div>
 
           </div>
@@ -246,9 +247,9 @@ function Home() {
       </section>
 
       {/* SEARCH SECTION */}
-      <section className="site-container py-12">
+     <section className="site-container bg-slate-50 pt-8 pb-4 dark:bg-slate-900">
 
-       <div className="mx-auto flex w-full max-w-3xl items-center gap-3 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg shadow-slate-200/50">
+        <div className="mx-auto flex w-full max-w-3xl items-center gap-3 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg shadow-slate-200/50n dark:border-slate-700 dark:bg-slate-900 dark:shadow-none" >
 
           <Search className="ml-3 shrink-0 text-slate-400" size={22} />
 
@@ -264,7 +265,7 @@ function Home() {
               }
             }}
             placeholder="What do you want to learn today?"
-            className="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm text-slate-700 outline-none placeholder:text-slate-400"
+            className="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm text-slate-700 outline-none placeholder:text-slate-400 dark:text-white dark:placeholder:text-slate-400"
           />
 
           <button
@@ -282,88 +283,63 @@ function Home() {
       </section>
 
       {/* CATEGORY SECTION */}
-      <section id="categories" className="site-container section-spacing">
+       {/* <section id="categories" className="site-container pt-8 pb-4">
 
-        <div className="mb-9">
-          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-blue-600">
+        <div className="mb-6">
+          <p className="text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-slate-300">
             Explore subjects
           </p>
 
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-            Browse by category
+          <h2 className="mt-2 text-3xl font-bold text-slate-900 dark:text-white">
+            Browse Categories
           </h2>
-
-          <p className="mt-3 text-slate-500">
-            Find the right subject and start your learning journey.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="flex gap-3 overflow-x-auto pb-3 scrollbar-hide">
 
-          {categories.map((category) => {
-            const Icon = category.icon;
-
-            return (
-              <button
-                key={category.name}
-                onClick={() => {
-                  setActiveCategory(category.name);
-
-                  document.getElementById("courses")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
-                className={`group flex items-center gap-4 rounded-2xl border p-5 text-left transition duration-300 hover:-translate-y-1 hover:shadow-lg ${
-                  activeCategory === category.name
-                    ? "border-blue-300 bg-blue-50"
-                    : "border-slate-100 bg-white hover:border-blue-200"
-                }`}
-              >
-
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
-                  <Icon size={25} />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-slate-900">
-                    {category.name}
-                  </h3>
-
-                  <p className="mt-1 text-xs text-slate-500">
-                    Explore courses
-                  </p>
-                </div>
-
-                <ArrowRight
-                  size={17}
-                  className="ml-auto text-slate-300 transition group-hover:translate-x-1 group-hover:text-blue-600"
-                />
-
-              </button>
-            );
-          })}
+          {["All", ...categories.map((c) => c.name)].map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setActiveCategory(category);
+                document.getElementById("courses")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className={`shrink-0 rounded-xl border px-6 py-3 text-sm font-semibold transition ${
+                activeCategory === category
+                  ? "border-blue-600 bg-blue-600 text-white shadow-md shadow-blue-200"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
 
         </div>
-      </section>
+      </section> */}
 
-      {/* FEATURED COURSES */}
-      <section id="courses" className="bg-slate-50 py-20">
-
+      {/* POPULAR COURSES */}
+ <section
+  id="courses"
+  className="bg-slate-50 pt-8 pb-8 md:pt-10 md:pb-10 dark:bg-slate-900"
+>
         <div className="site-container">
 
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+          {/* Section Heading */}
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
 
             <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-widest text-blue-600">
-                Start learning
+              <p className="text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-slate-300">
+                Start Learning
               </p>
 
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-                Featured courses
+              <h2 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
+                Popular Courses
               </h2>
 
-              <p className="mt-3 text-slate-500">
-                Carefully designed courses to help you grow.
+              <p className="mt-3 text-slate-500 dark:text-slate-300">
+                Discover courses designed to help you master mathematics.
               </p>
             </div>
 
@@ -372,90 +348,131 @@ function Home() {
                 setActiveCategory("All");
                 setSearch("");
               }}
-              className="inline-flex items-center gap-2 font-semibold text-blue-600 transition hover:text-blue-800"
+              className="flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-800"
             >
-              View all courses
-              <ArrowRight size={18} />
+              See All
+              <ArrowRight size={19} />
             </button>
 
           </div>
 
-          {/* COURSE FILTERS */}
-          <div className="mb-9 flex flex-wrap gap-3">
+          {/* Course Category Filters */}
+          <div className="mb-8 flex flex-wrap gap-2">
 
             {["All", ...categories.map((c) => c.name)].map((category) => (
-
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
                   activeCategory === category
-                    ? "bg-blue-600 text-white shadow-md shadow-blue-200"
-                    : "border border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600"
+                    ? "bg-blue-600 text-white"
+                    : "border border-slate-200 bg-white text-slate-600 hover:border-blue-300"
                 }`}
               >
                 {category}
               </button>
-
             ))}
 
           </div>
 
-          {/* COURSE CARDS */}
-          <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+          {/* Course Cards */}
+          {filteredCourses.length > 0 ? (
 
-            {filteredCourses.length > 0 ? (
+            
+<div className="relative">
 
-              filteredCourses.map((course) => (
-                <CourseCard key={course.id} course={course} />
-              ))
+  <div
+    id="course-carousel"
+    className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-6"
+  >
+    {filteredCourses.map((course) => (
+      <div
+        key={course.id}
+        className="w-[85%] shrink-0 snap-start sm:w-[48%] lg:w-[calc(33.333%-16px)]"
+      >
+        <CourseCard course={course} />
+      </div>
+    ))}
+  </div>
 
-            ) : (
+  {/* Carousel Navigation */}
+  <div className="mt-5 flex justify-center gap-3">
 
-              <div className="col-span-full rounded-2xl border border-slate-200 bg-white py-16 text-center">
+    <button
+      onClick={() =>
+        document.getElementById("course-carousel")?.scrollBy({
+          left: -350,
+          behavior: "smooth",
+        })
+      }
+      aria-label="Previous courses"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-blue-600 hover:text-white"
+    >
+      <ArrowRight className="rotate-180" size={20} />
+    </button>
 
-                <Search className="mx-auto mb-4 text-slate-300" size={40} />
+    <button
+      onClick={() =>
+        document.getElementById("course-carousel")?.scrollBy({
+          left: 350,
+          behavior: "smooth",
+        })
+      }
+      aria-label="Next courses"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-blue-600 hover:text-white"
+    >
+      <ArrowRight size={20} />
+    </button>
 
-                <h3 className="text-lg font-semibold text-slate-800">
-                  No courses found
-                </h3>
+  </div>
+</div>
 
-                <p className="mt-2 text-sm text-slate-500">
-                  Try another search or select a different category.
-                </p>
 
-                <button
-                  onClick={() => {
-                    setSearch("");
-                    setActiveCategory("All");
-                  }}
-                  className="mt-5 font-semibold text-blue-600 hover:text-blue-800"
-                >
-                  Clear filters
-                </button>
+          ) : (
 
-              </div>
+            <div className="rounded-2xl border border-slate-200 bg-white py-16 text-center">
 
-            )}
+              <Search className="mx-auto mb-4 text-slate-300" size={40} />
 
-          </div>
+              <h3 className="text-lg font-semibold text-slate-800 dark:text-white">
+                No courses found
+              </h3>
+
+              <p className="mt-2 text-sm text-slate-500 dark:text-slate-300">
+                Try another search or select a different category.
+              </p>
+
+              <button
+                onClick={() => {
+                  setSearch("");
+                  setActiveCategory("All");
+                }}
+                className="mt-5 font-semibold text-blue-600"
+              >
+                Clear filters
+              </button>
+
+            </div>
+
+          )}
+
         </div>
       </section>
 
       {/* ABOUT / FEATURES SECTION */}
-      <section id="about" className="site-container section-spacing">
+      <section id="about" className="site-container section-spacing dark:border-slate-700 dark:bg-slate-900">
 
         <div className="mx-auto mb-14 max-w-2xl text-center">
 
-          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-blue-600">
+          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-slate-300">
             Why Calculus Learning?
           </p>
 
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl dark:text-white">
             Learning that makes a difference
           </h2>
 
-          <p className="mt-4 leading-7 text-slate-500">
+          <p className="mt-4 leading-7 text-slate-500 dark:text-slate-300">
             Our goal is to make difficult mathematical concepts easier
             to understand through structured lessons and practical learning.
           </p>
@@ -467,28 +484,30 @@ function Home() {
           {features.map((feature) => {
             const Icon = feature.icon;
 
-            return (
+return (
+  <div
+    key={feature.title}
+    className="rounded-2xl border border-slate-100 bg-white p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900 dark:hover:border-blue-500 dark:hover:shadow-blue-950/30"
+  >
 
-              <div
-                key={feature.title}
-                className="rounded-2xl border border-slate-100 bg-white p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-blue-100 hover:shadow-xl"
-              >
+    {/* Feature Icon */}
+    <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors dark:bg-slate-800 dark:text-blue-400">
+      <Icon size={29} />
+    </div>
 
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
-                  <Icon size={29} />
-                </div>
+    {/* Feature Title */}
+    <h3 className="mb-3 text-xl font-bold text-slate-900 dark:text-white">
+      {feature.title}
+    </h3>
 
-                <h3 className="mb-3 text-xl font-bold text-slate-900">
-                  {feature.title}
-                </h3>
+    {/* Feature Description */}
+    <p className="leading-7 text-slate-500 dark:text-slate-300">
+      {feature.description}
+    </p>
 
-                <p className="leading-7 text-slate-500">
-                  {feature.description}
-                </p>
+  </div>
+);
 
-              </div>
-
-            );
           })}
 
         </div>
@@ -505,15 +524,15 @@ function Home() {
 
           <div className="relative">
 
-            <p className="mb-4 text-sm font-bold uppercase tracking-widest text-blue-100">
+            <p className="mb-4 text-sm font-bold uppercase tracking-widest text-blue-100 dark:text-slate-300">
               Your future starts here
             </p>
 
-            <h2 className="mx-auto max-w-2xl text-3xl font-bold leading-tight md:text-5xl">
+            <h2 className="mx-auto max-w-2xl text-3xl font-bold leading-tight md:text-5xl dark:text-white">
               Your learning journey starts today.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-xl leading-7 text-blue-100">
+            <p className="mx-auto mt-5 max-w-xl leading-7 text-blue-100 dark:text-slate-300">
               Explore new concepts, challenge yourself and discover
               how exciting mathematics can be.
             </p>
@@ -530,13 +549,13 @@ function Home() {
         </div>
       </section>
 
-  
-      <footer className="border-t border-slate-100 bg-indigo-50">
+      {/* FOOTER */}
+    <footer className="border-t border-slate-100 bg-indigo-50 dark:border-slate-800 dark:bg-slate-950">
 
         <div className="site-container flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
 
           <div>
-            <h3 className="text-lg font-bold text-slate-900">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white">
               Calculus<span className="text-blue-600">Learning</span>
             </h3>
 

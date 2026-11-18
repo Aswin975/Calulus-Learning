@@ -7,6 +7,10 @@ export const courses = [
     level: "Beginner",
     duration: "8 hours",
     lessons: 24,
+    price: 499,
+    originalPrice: 999,
+    discount: 50,
+    tags: ["RECORDED CLASS", "STUDY MATERIALS", "TESTS"],
     description:
       "Understand the foundations of calculus with simple explanations and practical examples.",
 
@@ -68,6 +72,10 @@ export const courses = [
     level: "Beginner",
     duration: "6 hours",
     lessons: 18,
+    price: 999,
+    originalPrice: 1999,
+    discount: 50,
+     tags: ["RECORDED CLASS", "STUDY MATERIALS", "TESTS"],
     description:
       "Build strong algebra skills through practical lessons and exercises.",
     image:
@@ -80,6 +88,10 @@ export const courses = [
     level: "Advanced",
     duration: "12 hours",
     lessons: 32,
+    price: 999,
+    originalPrice: 1999,
+    discount: 50,
+     tags: ["RECORDED CLASS", "STUDY MATERIALS", "TESTS"],
     description:
       "Explore advanced mathematical concepts and problem-solving techniques.",
     image:
@@ -92,6 +104,13 @@ export const courses = [
     level: "Beginner",
     duration: "10 hours",
     lessons: 20,
+
+    price: 399,
+    originalPrice: 799,
+    discount: 50,
+     tags: ["RECORDED CLASS", "STUDY MATERIALS", "TESTS"],
+
+     
     description:
       "Explore fundamental physics concepts through practical examples and interactive lessons.",
     image:
